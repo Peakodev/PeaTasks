@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.html {
+  font-family: "Nunito", sans-serif;
+}
+
+.logo {
+  text-align: center;
+  margin: 25px 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.logo:hover {
+  transform: translateY(-4%);
+}
+.logo svg {
+  cursor: pointer;
+  height: 90px;
+  width: 90px;
+}
+
+#box {
+  display: flex;
+  justify-content: center;
+}
+#box .task-form {
+  position: relative;
+}
+#box .task-form #task-input {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 10px 24px 10px 16px;
+  background-color: #000;
+  width: 408px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+#box .task-form .task-add {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 8px;
+  font-size: 16px;
+  color: gray;
+}
+#box .task-form .task-add:hover {
+  color: white;
+  cursor: pointer;
+}
+#box .task-list {
+  margin-top: 20px;
+}
+#box .task-list .task-item {
+  margin: 8px 0;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  background-color: #ccc;
+  width: 408px;
+  color: #333;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: relative;
+}
+#box .task-list .task-item.done {
+  color: #333;
+  background-color: rgba(31, 32, 29, 0.712);
+}
+#box .task-list .task-item.done .task-done i:first-child {
+  display: inline-block;
+}
+#box .task-list .task-item.done .task-done i:last-child {
+  display: none;
+}
+#box .task-list .task-item.done .task-text {
+  text-decoration: line-through;
+}
+#box .task-list .task-item .task-done {
+  display: inline-block;
+}
+#box .task-list .task-item .task-done i:first-child {
+  display: none;
+  font-size: 18px;
+  color: #45d445;
+}
+#box .task-list .task-item .task-done i:last-child {
+  display: inline-block;
+  font-size: 18px;
+  color: #83a4cf;
+}
+#box .task-list .task-item .task-text {
+  display: inline-block;
+  word-wrap: break-word;
+}
+#box .task-list .task-item .task-del {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding-right: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+#box .task-list .task-item .task-del:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* BREAKPOINT */
+#app {
+  overflow: hidden;
+}
+
+@media (min-width: 1089px) {
+  .hidden-on-XL {
+    display: none;
+  }
+}
+@media (min-width: 931px) and (max-width: 1088px) {
+  .hidden-on-L {
+    display: none;
+  }
+}
+@media (max-width: 1088px) {
+  .hidden-on-lte-L {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 930px) {
+  .hidden-on-M {
+    display: none;
+  }
+}
+@media (min-width: 701px) and (max-width: 768px) {
+  .hidden-on-S {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hidden-on-lte-S {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #task-input,
+.task-item {
+    width: calc(100vw - 16px) !important;
+  }
+}
+@media (max-width: 480px) {
+  .hidden-on-XXS {
+    display: none;
+  }
+}
+@media (max-width: 335px) {
+  .hidden-on-XXXS {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
